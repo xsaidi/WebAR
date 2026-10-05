@@ -21,7 +21,14 @@
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-top"><p class="eyebrow"><span class="dot"></span> ОБЪЕКТ 01 / ДИВАН В СТИЛЕ ЛОФТ</p><span class="edition">Меньше лишнего. Больше жизни.</span></div>
       <div class="hero-heading"><h1 id="hero-title">Ваше место.<br><span>Ваш характер.</span></h1><div class="hero-intro"><p>Выразительная форма.<br>Честные материалы.<br>Комфорт без лишних слов.</p><a class="round-link" href="#about" aria-label="Узнать о диване"><span aria-hidden="true">↓</span></a></div></div>
-      <figure class="hero-image"><img src="assets/sofa.webp" width="1536" height="1024" fetchpriority="high" alt="Терракотовый диван Форма в светлом лофте с бетонной стеной"><figcaption><span>ФОРМА / 01</span><span>Создан для неспешной жизни</span><a href="#colors">Найти свой цвет <span aria-hidden="true">↗</span></a></figcaption><span class="image-index" aria-hidden="true">01 — 03</span></figure>
+      <figure class="hero-image"><img id="hero-sofa" src="assets/sofa-angle.webp" width="1800" height="1208" fetchpriority="high" alt="Терракотовый диван Форма с двумя подушками сиденья и прямыми металлическими ножками, ракурс под углом"><figcaption><span>ФОРМА / 01</span><span>Создан для неспешной жизни</span><a href="#colors">Найти свой цвет <span aria-hidden="true">↗</span></a></figcaption><span class="image-index" id="view-index" aria-hidden="true">01 / 04</span></figure>
+      <div class="photo-views" role="group" aria-label="Ракурс дивана">
+        <button class="photo-view" type="button" data-view="angle" aria-pressed="true"><img src="assets/sofa-angle.webp" width="90" height="60" alt="" aria-hidden="true"><span>Под углом</span></button>
+        <button class="photo-view" type="button" data-view="front" aria-pressed="false"><img src="assets/sofa-front.webp" width="90" height="60" alt="" aria-hidden="true"><span>Спереди</span></button>
+        <button class="photo-view" type="button" data-view="side" aria-pressed="false"><img src="assets/sofa-side.webp" width="90" height="60" alt="" aria-hidden="true"><span>Сбоку</span></button>
+        <button class="photo-view" type="button" data-view="back" aria-pressed="false"><img src="assets/sofa-back.webp" width="90" height="60" alt="" aria-hidden="true"><span>Сзади</span></button>
+      </div>
+      <p class="sr-only" id="view-status" aria-live="polite">Ракурс: под углом</p>
       <div class="hero-foot"><span>Геометрия лофта. Ощущение дома.</span><span>ДИЗАЙН, К КОТОРОМУ ХОЧЕТСЯ ПРИКОСНУТЬСЯ</span></div>
     </section>
     <section class="about wrap section" id="about" aria-labelledby="about-title">
