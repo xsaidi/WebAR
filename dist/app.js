@@ -1,4 +1,21 @@
 'use strict';
+const photoViews = {
+  angle: {name: 'под углом', index: '01', alt: 'Терракотовый диван Форма с двумя подушками сиденья и прямыми металлическими ножками, ракурс под углом'},
+  front: {name: 'спереди', index: '02', alt: 'Терракотовый диван Форма, вид строго спереди'},
+  side: {name: 'сбоку', index: '03', alt: 'Терракотовый диван Форма, вид сбоку с прямым подлокотником'},
+  back: {name: 'сзади', index: '04', alt: 'Терракотовый диван Форма, вид сзади с прямоугольной спинкой'}
+};
+document.querySelectorAll('.photo-view').forEach(button => {
+  button.addEventListener('click', () => {
+    const view = photoViews[button.dataset.view];
+    const image = document.querySelector('#hero-sofa');
+    image.src = `assets/sofa-${button.dataset.view}.webp`;
+    image.alt = view.alt;
+    document.querySelector('#view-index').textContent = `${view.index} / 04`;
+    document.querySelector('#view-status').textContent = `Ракурс: ${view.name}`;
+    document.querySelectorAll('.photo-view').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+  });
+});
 const colors = {
   terra: { name: 'Терракота', number: '01', fabric: '#ad5c40', light: '#c27b5b', dark: '#783d2c', description: 'Тёплый акцент для бетона, дерева и вечернего света.' },
   graphite: { name: 'Графит', number: '02', fabric: '#535450', light: '#777971', dark: '#353632', description: 'Сдержанная глубина для выразительного пространства.' },
